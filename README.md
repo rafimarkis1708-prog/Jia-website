@@ -19,89 +19,6 @@
       font-family: 'Poppins', sans-serif;
       text-align: center;
     }
-
-    h1 {
-      color: #e91e63;
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.8em;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    button {
-      background-color: #ff80ab;
-      border: none;
-      color: white;
-      font-size: 1.2em;
-      padding: 12px 25px;
-      border-radius: 25px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(255, 128, 171, 0.5);
-      transition: transform 0.2s, background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #ec407a;
-      transform: scale(1.05);
-    }
-
-    /* Hati jatuh */
-    .heart {
-      position: fixed;
-      top: -10px;
-      color: #ff4d79;
-      font-size: 18px;
-      animation: fall linear forwards;
-      opacity: 0.9;
-      z-index: 0;
-    }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
-    /* Popup */
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.2);
-      padding: 30px 40px;
-      text-align: center;
-      transition: transform 0.5s ease;
-      z-index: 10;
-    }
-
-    .popup.show {
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    .popup h2 {
-      font-family: 'Dancing Script', cursive;
-      color: #d81b60;
-      font-size: 2em;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 2em; }
-      button { font-size: 1em; padding: 10px 20px; }
-      .popup { width: 80%; }
-    }
   </style>
 </head>
 <body>
@@ -114,7 +31,7 @@
   </div>
 
   <script>
-    // Buat hati jatuh terus menerus
+  
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
