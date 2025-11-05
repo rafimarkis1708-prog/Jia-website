@@ -45,7 +45,6 @@
       transform: scale(1.05);
     }
 
-    /* Hati jatuh */
     .heart {
       position: fixed;
       top: -10px;
@@ -57,17 +56,10 @@
     }
 
     @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
     }
 
-    /* Popup */
     .popup {
       position: fixed;
       top: 50%;
@@ -82,9 +74,7 @@
       z-index: 10;
     }
 
-    .popup.show {
-      transform: translate(-50%, -50%) scale(1);
-    }
+    .popup.show { transform: translate(-50%, -50%) scale(1); }
 
     .popup h2 {
       font-family: 'Dancing Script', cursive;
@@ -114,7 +104,6 @@
   </div>
 
   <script>
-    // Buat hati jatuh terus menerus
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -123,15 +112,11 @@
       heart.style.animationDuration = (3 + Math.random() * 2) + 's';
       heart.style.fontSize = (12 + Math.random() * 24) + 'px';
       document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 5000);
+      setTimeout(() => { heart.remove(); }, 5000);
     }
 
     setInterval(createHeart, 300);
 
-    // Popup kejutan
     const btn = document.getElementById('loveBtn');
     const popup = document.getElementById('popup');
 
